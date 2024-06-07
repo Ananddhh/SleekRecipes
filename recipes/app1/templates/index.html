@@ -7,8 +7,8 @@
             font-family: 'poppins', sans-serif;
         }
     </style>
-
-    <div class="container min-h-screen min-w-full bg-[url('{% static 'images/image.png' %}')] bg-center bg-cover px-28 py-5 relative">
+    <!-- <div class="container min-h-screen min-w-full bg-black bg-center bg-cover px-28 py-5 relative"> -->
+    <div class="container min-h-screen min-w-full bg-[url('{% static 'images/fl.jpg' %}')] bg-center bg-cover px-10 py-5 relative">
 
         <nav class="flex items center">
             <img src="{% static 'images/cart.png' %}" alt="image" class="w-7 h-7 cursor-pointer">
@@ -20,19 +20,24 @@
             </ul>
         </nav>
         <div class="text-white mt-48 max-w-lg">
-            <h1 class="text-6xl font-semibold leading-normal">Recipes<br>In just<span class="font-light">15 mins</span></h1>
-            <p>SleekRecipes offers a wide range of recipes, including veg, meats, dairy, baked goods and non-perishable items.</p>
+            <h1 class="text-6xl font-semibold leading-normal">Gourmet Recipes
+                 <br>Ready in Just<br><span class="font-light">15 Minutes</span></h1>
+            <p>SleekRecipes offers an extensive collection of culinary delights, featuring vegetarian dishes, meat-based entrees, dairy products,<br> baked goods, and non-perishable items.</p>
             
             <div class="mt-10">
-                <a href="#" class="bg-yellow-600 rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">CHECK NOW</a>
-                <a href="#">download APP <span class="text-lg inline-block">&#10148;</span></a>
+                <a href="#" class="bg-black text-white rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-black">CHECK NOW</a>
+
+                <!-- <a href="#" class="bg-yellow-600 rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">CHECK NOW</a> -->
+                <!-- <a href="#">download APP <span class="text-lg inline-block">&#10148;</span></a> -->
+                <a href="#" class="text-black hover:text-gray-900 transition duration-300">Download APP <span class="text-lg inline-block">&#10148;</span></a>
+
                 
             </div>
         </div>
 
-        <div>
+        <!-- <div>
             <img src="{% static 'images/chwf1.jpg' %}" alt="image" class="w-full xl:w-1/2 xl:absolute bottom-0 right-20">
-        </div>
+        </div> -->
 
     </div>
 {% endblock %}
