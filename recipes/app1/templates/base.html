@@ -8,26 +8,26 @@
         }
     </style>
 {% endblock %}
-    <header class="bg-gray-800 p-5">
-        <nav class="flex items-center container mx-auto">
-            <img src="{% static 'images/cart.png' %}" alt="Cart" class="w-7 h-7 cursor-pointer">
+<body class="bg-black text-white">
+    <header class="bg-black p-5">
+        <nav class="flex items-center">
+            <img src="{% static 'images/cart.png' %}" alt="image" class="w-7 h-7 cursor-pointer">
             <ul class="flex ml-auto">
-                <li class="list-none inline-block px-5"><a href="{% url 'home' %}" class="no-underline text-white px-2 hover:text-gray-400">Home</a></li>
-                <li class="list-none inline-block px-5"><a href="{% url 'about' %}" class="no-underline text-white px-2 hover:text-gray-400">About</a></li>
-                <li class="list-none inline-block px-5"><a href="{% url 'features' %}" class="no-underline text-white px-2 hover:text-gray-400">Features</a></li>
-                <li class="list-none inline-block px-5"><a href="{% url 'contact' %}" class="no-underline text-white px-2 hover:text-gray-400">Contact</a></li>
+                <li class="list-none inline-block px-5"><a href="{% url 'home' %}" class="no-underline text-white px-2">Home</a></li>
+                <li class="list-none inline-block px-5"><a href="{% url 'about' %}" class="no-underline text-white px-2">About</a></li>
+                <li class="list-none inline-block px-5"><a href="{% url 'features' %}" class="no-underline text-white px-2">Features</a></li>
+                <li class="list-none inline-block px-5"><a href="{% url 'contact' %}" class="no-underline text-white px-2">Contact</a></li>
             </ul>
         </nav>
-        
     </header>
 
-    <main class="container mx-auto py-10">
+    <main class="flex-1">
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="bg-gray-800 p-5 mt-10">
+    <footer class="bg-black p-5 mt-10">
         <div class="container mx-auto text-center">
             <p>&copy; 2024 SleekRecipes. All rights reserved.</p>
         </div>
     </footer>
-
+</body>
