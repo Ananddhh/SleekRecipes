@@ -1,49 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Features</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
+{% block title %}Features - SleekRecipes{% endblock %}
 
+{% block content %}
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <body class="bg-gray-100 text-gray-800">
     <!-- Hero Section -->
-    <header class="bg-cover bg-center h-screen" style="background-image: url('path/to/your/hero-image.jpg');">
+    <header class="bg-cover bg-center h-screen bg-[url('{% static 'images/chwf1.jpg' %}')]">
         <div class="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center">
             <h1 class="text-6xl text-white font-bold">Discover Delicious Recipes</h1>
-            <p class="mt-4 text-lg text-white">Unleash your inner chef with our curated recipes and cooking tips.</p>
-            <a href="#features" class="mt-6 bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-300">Explore Features</a>
+            <p class="mt-4 text-lg text-gray-300">Unleash your inner chef with our curated recipes and cooking tips.</p>
+            <a href="#features" class="mt-6 bg-black text-white py-2 px-4 rounded hover:bg-white hover:text-black transition duration-300">Explore Features</a>
         </div>
     </header>
 
     <!-- Introduction Section -->
-    <section class="py-16 px-4 md:px-8">
+    <section class="py-16 px-4 md:px-8 bg-black text-white">
         <h2 class="text-4xl font-semibold text-center mb-4">Welcome to Our Recipe World</h2>
         <p class="text-lg text-center max-w-2xl mx-auto">Our platform is dedicated to bringing you the best culinary experiences with a wide array of recipes. Whether you're a novice or an experienced cook, our recipes are designed to guide you through every step of the cooking process.</p>
     </section>
 
     <!-- Recipe Highlights Section -->
-    <section class="py-16 bg-gray-200">
+    <section class="bg-cover bg-center h-77 bg-[url('{% static 'images/ru.jpg' %}')] py-16  text-black ">
         <div class="container mx-auto px-4 md:px-8">
-            <h2 id="features" class="text-4xl font-semibold text-center mb-8">Recipe Highlights</h2>
+            <h2 id="features" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-white hover:text-black transition duration-300 text-2xl font-semibold text-center mb-8">
+                Recipe Highlights
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="path/to/recipe1.jpg" alt="Recipe 1" class="w-full h-48 object-cover rounded-t-lg">
-                    <h3 class="text-2xl font-semibold mt-4">Gourmet Pasta</h3>
-                    <p class="mt-2">Delight in the rich flavors of our gourmet pasta recipe, crafted with the finest ingredients.</p>
+                <div class="bg-black p-6 rounded-lg shadow-lg">
+                    <img src="{% static 'images/pasta.jpg' %}" alt="Recipe 1" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-2xl text-white font-semibold mt-4">Gourmet Pasta</h3>
+                    <p class="mt-2 text-gray-400">Delight in the rich flavors of our gourmet pasta recipe, crafted with the finest ingredients.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="path/to/recipe2.jpg" alt="Recipe 2" class="w-full h-48 object-cover rounded-t-lg">
-                    <h3 class="text-2xl font-semibold mt-4">Classic Pancakes</h3>
-                    <p class="mt-2">Start your day right with our fluffy and delicious classic pancake recipe.</p>
+                <div class="bg-black p-6 rounded-lg shadow-lg">
+                    <img src="{% static 'images/pan.jpg' %}" alt="Recipe 1" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-2xl text-white font-semibold mt-4">Classic Pancakes</h3>
+                    <p class="mt-2 text-gray-400">Start your day right with our fluffy and delicious classic pancake recipe.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="path/to/recipe3.jpg" alt="Recipe 3" class="w-full h-48 object-cover rounded-t-lg">
-                    <h3 class="text-2xl font-semibold mt-4">Exotic Salad</h3>
-                    <p class="mt-2">Experience a burst of flavors with our refreshing and healthy exotic salad recipe.</p>
+                <div class="bg-black p-6 rounded-lg shadow-lg">
+                    <img src="{% static 'images/salad.jpg' %}" alt="Recipe 1" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-2xl text-white font-semibold mt-4">Exotic Salad</h3>
+                    <p class="mt-2 text-gray-400">Experience a burst of flavors with our refreshing and healthy exotic salad recipe.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Recipe Steps Section -->
+    <section class="py-16 px-4 md:px-8 bg-black text-white">
+        <h2 class="text-4xl font-semibold text-center mb-8">Cooking Steps</h2>
+        <div class="max-w-4xl mx-auto">
+            <ol class="list-decimal list-inside space-y-4">
+                <li><strong>Preparation:</strong> Gather all the necessary ingredients and tools. Ensure everything is measured and ready.</li>
+                <li><strong>Cooking:</strong> Follow our step-by-step instructions to cook your chosen recipe. We provide detailed guidance to make the process easy and fun.</li>
+                <li><strong>Plating:</strong> Learn how to plate your dish beautifully, making it look as good as it tastes.</li>
+                <li><strong>Serving:</strong> Get tips on the best ways to serve your dish, including ideal pairings and presentation styles.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Tips & Tricks Section -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-4xl font-semibold text-center mb-8">Tips & Tricks</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold">Ingredient Selection</h3>
+                    <p class="mt-2 text-gray-400">Choose the freshest and highest-quality ingredients to ensure the best flavors and textures in your dishes.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold">Cooking Techniques</h3>
+                    <p class="mt-2 text-gray-400">Master various cooking techniques, from sautéing to grilling, to bring out the best in your ingredients.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold">Flavor Balancing</h3>
+                    <p class="mt-2 text-gray-400">Learn how to balance flavors effectively, combining sweet, salty, sour, and umami to create perfect harmony in your dishes.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold">Presentation Skills</h3>
+                    <p class="mt-2 text-gray-400">Improve your plating and presentation skills to make your dishes look as good as they taste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 px-4 md:px-8 text-center bg-black text-white">
+        <h2 class="text-4xl font-semibold mb-4">Join Our Culinary Community</h2>
+        <p class="text-lg mb-8">Sign up for our newsletter to get the latest recipes, cooking tips, and exclusive offers delivered straight to your inbox.</p>
+        <a href="#subscribe" class="bg-yellow-400 text-black py-2 px-6 rounded-lg hover:bg-yellow-500 transition duration-300">Subscribe Now</a>
+    </section>
+
+    <!-- Footer Section -->
+    <!-- <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <p>&copy; 2024 RecipeWorld. All rights reserved.</p>
+        </div>
+    </footer>
+</body> -->
+
+{% endblock %}
